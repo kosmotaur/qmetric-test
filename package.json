@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "babel-node src"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/kosmotaur/qmetric-test/issues"
   },
-  "homepage": "https://github.com/kosmotaur/qmetric-test#readme"
+  "homepage": "https://github.com/kosmotaur/qmetric-test#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0"
+  }
 }
