@@ -7,7 +7,18 @@ const config = {
   mode: 'development',
   plugins: [
     new HtmlWebpackPlugin()
-  ]
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader'
+        }
+      }
+    ]
+  }
 }
 
 export default config
