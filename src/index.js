@@ -4,14 +4,51 @@ import { render } from 'react-dom'
 const appContainer = document.querySelector('body')
 const app =
   [
-    <section className='hero is-success is-bold'>
+    <section className='hero is-success is-bold section'>
       <div className='hero-body'>
         <div className='container'>
           <h1 className='title'>QMetric Shop</h1>
         </div>
       </div>
     </section>,
-    <section>
+    <section className='section'>
+      <div className='container'>
+        <div className='box'>
+          <div className='level'>
+            <div className='level-left'>
+              <div className='level-item'>
+                <div className='field'>
+                  <div className='control'>
+                    <div className='select is-large'>
+                      <select>
+                        <option>Select product</option>
+                        <option>Beans</option>
+                        <option>Coke</option>
+                        <option>Oranges</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className='level-item'>
+                <div className='control'>
+                  <input className='input is-large' type='text' placeholder='quantity' />
+                </div>
+              </div>
+              <div className='level-item'>
+                items
+              </div>
+            </div>
+            <div className='level-right'>
+              <div className='level-item'>
+                <button className='button is-large is-link'>Add</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>,
+    <section className='section'>
       <div className='container'>
         <table className='table is-fullwidth'>
           <thead>
