@@ -1,4 +1,4 @@
-#QMetric test
+# QMetric test
 
 Technical test for QMetric.
 
