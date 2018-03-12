@@ -20,7 +20,8 @@ const config = {
         }
       }
     ]
-  }
+  },
+  devtool: 'cheap-module-source-map'
 }
 
 export default config
