@@ -2,7 +2,8 @@ import React from 'react'
 import ProductSelect from '../../products/components/productSelect'
 
 export default ({
-  products
+  products,
+  selectProduct
 }) => (
   <section className='section'>
     <div className='container'>
@@ -13,7 +14,7 @@ export default ({
               <div className='field'>
                 <div className='control'>
                   <div className='select is-large'>
-                    <ProductSelect products={products} />
+                    <ProductSelect products={products} selectProduct={selectProduct} />
                   </div>
                 </div>
               </div>
