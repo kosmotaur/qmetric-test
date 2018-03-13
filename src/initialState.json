@@ -18,6 +18,12 @@
         "name": "Oranges",
         "unit": "kg",
         "price": 1.99
+      },
+      {
+        "key": "apples",
+        "name": "Apples",
+        "unit": "kg",
+        "price": 1
       }
     ]
   }
