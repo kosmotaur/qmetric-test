@@ -1,3 +1,9 @@
-import { pathOr } from 'ramda'
+import { compose, converge, find, path, pathOr, propEq } from 'ramda'
 
-export const getProducts = pathOr([], ['products', 'productsCollection'])
+const getProductsState = path(['products'])
+
+export const getProductsCollection = compose(pathOr([], ['productsCollection']), getProductsState)
+export const getSelectedProduct = converge(find, [
+  converge(propEq('key'), [path(['selectedProductKey']), getProductsState]),
+  getProductsCollection
+])

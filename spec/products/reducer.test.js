@@ -6,16 +6,17 @@ import reducer from '../../dist/products/reducer'
 const chance = new Chance()
 
 test('products reducer returns default state', t => {
-  const state = reducer()
+  const bogusAction = {}
+  const state = reducer(undefined, bogusAction)
   const defaultProductsState = {}
 
   t.deepEqual(state, defaultProductsState)
 })
 
-test.only('products reducer updates selected product', t => {
+test('products reducer updates selected product', t => {
   const selectedProductKey = chance.word()
   const state = reducer({}, actions.selectProduct({key: selectedProductKey}))
-  const stateWithSelectedProduct = {selectedProduct: {key: selectedProductKey}}
+  const stateWithSelectedProduct = {selectedProductKey: selectedProductKey}
 
   t.deepEqual(state, stateWithSelectedProduct)
 })

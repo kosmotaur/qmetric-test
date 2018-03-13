@@ -1,8 +1,8 @@
-import { objOf } from 'ramda'
+import { identity } from 'ramda'
 import { createActions } from 'redux-actions'
 
 const actions = createActions({
-  'SELECT_PRODUCT': objOf('key')
+  'SELECT_PRODUCT': identity
 })
 
 export default actions
